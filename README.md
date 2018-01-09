@@ -9,11 +9,11 @@ Please note that LX Studio is not open-source software. The license grants permi
 
 ### Overview ###
 
-[LXStudio](http://lx.studio/) is a digital lighting workstation, bringing concepts from digital audio workstations and modular synthesis into the realm of LED lighting control. Generative patterns, interactive inputs, and flexible parameter-driven modulation — a rich environment for lighting composition and performance.
+[LX Studio](http://lx.studio/) is a digital lighting workstation, bringing concepts from digital audio workstations and modular synthesis into the realm of LED lighting control. Generative patterns, interactive inputs, and flexible parameter-driven modulation — a rich environment for lighting composition and performance.
 
 ### Getting Started ###
 
-LXStudio runs on top of Processing. [Download and install Processing &rarr;](https://processing.org/download/)
+LX Studio runs on top of Processing. [Download and install Processing &rarr;](https://processing.org/download/)
 
 Next, clone this project and open the LXStudio.pde project in Processing:
 ```
