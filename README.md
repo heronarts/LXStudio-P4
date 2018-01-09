@@ -1,0 +1,2 @@
+# LXStudio
+LXStudio lighting application
