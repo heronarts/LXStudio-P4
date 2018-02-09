@@ -26,7 +26,7 @@ heronarts.lx.studio.LXStudio lx;
 
 void setup() {
   // Processing setup, constructs the window and the LX instance
-  size(960, 720, P3D);
+  size(800, 720, P3D);
   lx = new heronarts.lx.studio.LXStudio(this, buildModel(), MULTITHREADED);
   lx.ui.setResizable(RESIZABLE);
 }
