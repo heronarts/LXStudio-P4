@@ -23,12 +23,22 @@
 
 // Reference to top-level LX instance
 heronarts.lx.studio.LXStudio lx;
+heronarts.lx.studio.LXStudio.Flags flags = new heronarts.lx.studio.LXStudio.Flags();
 
 void setup() {
   // Processing setup, constructs the window and the LX instance
   size(800, 720, P3D);
-  lx = new heronarts.lx.studio.LXStudio(this, buildModel(), MULTITHREADED);
-  lx.ui.setResizable(RESIZABLE);
+  try {  
+    // Configuration flags
+    flags.startMultiThreaded = MULTITHREADED;
+    flags.resizable = RESIZABLE;
+    flags.useGLPointCloud = false;
+    
+    // Fire it up!
+    lx = new heronarts.lx.studio.LXStudio(this, flags);
+  } catch (Exception x) {
+    x.printStackTrace();
+  }
 }
 
 void initialize(final heronarts.lx.studio.LXStudio lx, heronarts.lx.studio.LXStudio.UI ui) {
