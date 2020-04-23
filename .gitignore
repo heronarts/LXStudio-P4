@@ -6,4 +6,5 @@ application.windows32
 application.windows64
 application.macosx
 .lxproject
+.lxpreferences
 

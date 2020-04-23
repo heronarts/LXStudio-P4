@@ -1,0 +1,30 @@
+{
+  "fixtureType": "Helix",
+
+  "strips": [
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 0, "z": 0, "yaw": 0 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 10, "z": 0, "yaw": 20 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 20, "z": 0, "yaw": 30 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 30, "z": 0, "yaw": 45 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 40, "z": 0, "yaw": 60 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 50, "z": 0, "yaw": 75 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 60, "z": 0, "yaw": 90 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 70, "z": 0, "yaw": 105 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 80, "z": 0, "yaw": 120 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 90, "z": 0, "yaw": 135 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 100, "z": 0, "yaw": 150 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 110, "z": 0, "yaw": 165 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 120, "z": 0, "yaw": 180 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 130, "z": 0, "yaw": 195 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 140, "z": 0, "yaw": 210 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 150, "z": 0, "yaw": 225 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 160, "z": 0, "yaw": 240 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 170, "z": 0, "yaw": 255 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 180, "z": 0, "yaw": 270 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 190, "z": 0, "yaw": 285 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 200, "z": 0, "yaw": 300 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 210, "z": 0, "yaw": 315 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 220, "z": 0, "yaw": 330 },
+    { "numPoints": 40, "spacing": 1, "x": 0, "y": 230, "z": 0, "yaw": 345 }
+  ]
+}
