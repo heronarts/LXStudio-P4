@@ -18,7 +18,7 @@ LX Studio runs on top of Processing. [Download and install Processing &rarr;](ht
 Next, clone this project and open the LXStudio.pde project in Processing:
 ```
 $ cd ~/Documents/Processing
-$ git clone https://github.com/heronarts/LXStudio.git
+$ git clone https://github.com/heronarts/LXStudio-P3.git
 ```
 
 Consult the [LX Studio API reference &rarr;](http://lx.studio/api/)
