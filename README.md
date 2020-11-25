@@ -21,6 +21,8 @@ $ cd ~/Documents/Processing
 $ git clone https://github.com/heronarts/LXStudio-P3.git
 ```
 
+Documentation is available on the [LX Studio Wiki &rarr;](https://github.com/heronarts/LXStudio/wiki)
+
 Consult the [LX Studio API reference &rarr;](http://lx.studio/api/)
 
 More and better documentation is coming soon!
