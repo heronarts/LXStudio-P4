@@ -15,11 +15,15 @@ Please note that LX Studio is not open-source software. The license grants permi
 
 LX Studio runs on top of Processing. [Download and install Processing &rarr;](https://processing.org/download/)
 
-Next, clone this project and open the LXStudio.pde project in Processing:
+Download LXStudio-P3 either via git clone in Terminal:
 ```
 $ cd ~/Documents/Processing
 $ git clone https://github.com/heronarts/LXStudio-P3.git
 ```
+
+Or via direct download: https://github.com/heronarts/LXStudio-P3/archive/master.zip
+
+Next, open the LXStudio.pde project in Processing and click Run.
 
 Documentation is available on the [LX Studio Wiki &rarr;](https://github.com/heronarts/LXStudio/wiki)
 
