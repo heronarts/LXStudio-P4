@@ -25,6 +25,7 @@ heronarts.lx.studio.LXStudio lx;
 
 void settings() {
   size(960, 800, P3D);
+  pixelDensity(displayDensity());
 }
 
 void setup() {
