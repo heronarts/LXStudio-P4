@@ -23,6 +23,13 @@
 // Reference to top-level LX instance
 heronarts.lx.studio.LXStudio lx;
 
+{
+  // NOTE(mcslee): Hack for macOS Ventura!!
+  // https://github.com/processing/processing4/issues/544
+  // Hopefully to be removed in a future version
+  com.jogamp.opengl.GLProfile.initSingleton();
+}
+
 void settings() {
   size(960, 800, P3D);
   pixelDensity(displayDensity());
