@@ -18,7 +18,12 @@ import java.util.logging.LogRecord;
       new CompoundParameter("centerDistance", 0, 1)
           .setDescription("Blah center of the spiral");
 
-  SawLFO saw1 = new SawLFO("blahSAW1", 0, 1, 3000);
+public
+  final CompoundParameter saw1Ms =
+      new CompoundParameter("saw1thing", 2000, 1000, 5000)
+          .setDescription("Blah saw1");
+
+  SawLFO saw1 = new SawLFO("blahSAW1", 0, 1, saw1Ms);
   SawLFO saw2 = new SawLFO("blahSAW2", 0, 1, 3000);
 
   Logger logger;
@@ -27,6 +32,7 @@ public
   EthanChaseFirstPattern(LX lx) {
     super(lx);
     addParameter("centerDistance", this.centerDistance);
+    addParameter("saw1blah", this.saw1Ms);
     addModulator(saw1);
     addModulator(saw2);
     saw1.start();
