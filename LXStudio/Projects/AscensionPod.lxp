@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699135863245,
+  "timestamp": 1699137357374,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -697,13 +697,13 @@
               "transitionEnabled": false,
               "transitionTimeSecs": 5.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 0,
+              "focusedPattern": 1,
               "triggerPatternCycle": false
             },
             "children": {},
             "effects": [],
             "clips": [],
-            "patternIndex": 0,
+            "patternIndex": 1,
             "patterns": [
               {
                 "id": 48,
@@ -739,6 +739,38 @@
                 "children": {
                   "modulation": {
                     "id": 49,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              },
+              {
+                "id": 5226,
+                "class": "LXStudio$EthanChaseFirstPattern",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false,
+                  "autoCycleEligible": true
+                },
+                "parameters": {
+                  "label": "EthanChaseFirst",
+                  "recall": false,
+                  "centerDistance": 0.4899999890476465
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5227,
                     "class": "heronarts.lx.modulation.LXModulationEngine",
                     "internal": {
                       "modulationColor": 0
@@ -794,7 +826,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.5926429782670445
+            "basis": 0.9273424105260963
           },
           {
             "id": 5141,
@@ -821,7 +853,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.5680000000000176
+            "basis": 0.8350000000000293
           },
           {
             "id": 5183,
@@ -848,7 +880,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.2630000000000008
+            "basis": 0.530000000000012
           }
         ],
         "modulations": [

@@ -1,4 +1,4 @@
-/** 
+/**
  * By using LX Studio, you agree to the terms of the LX Studio Software
  * License and Distribution Agreement, available at: http://lx.studio/license
  *
@@ -14,10 +14,10 @@
 // ---------------------------------------------------------------------------
 //
 // Welcome to LX Studio! Getting started is easy...
-// 
+//
 // (1) Quickly scan this file
 // (2) Move on to "Patterns" to write your animations
-// 
+//
 // ---------------------------------------------------------------------------
 
 // Reference to top-level LX instance
@@ -29,7 +29,8 @@ void settings() {
 }
 
 void setup() {
-  heronarts.lx.studio.LXStudio.Flags flags = new heronarts.lx.studio.LXStudio.Flags(this);
+  heronarts.lx.studio.LXStudio.Flags flags =
+      new heronarts.lx.studio.LXStudio.Flags(this);
   flags.useGLPointCloud = true;
   flags.startMultiThreaded = true;
   flags.resizable = true;
@@ -40,17 +41,19 @@ void initialize(LX lx) {
   // Add custom components or output drivers here
 }
 
-void initializeUI(final heronarts.lx.studio.LXStudio lx, heronarts.lx.studio.LXStudio.UI ui) {
+void initializeUI(final heronarts.lx.studio.LXStudio lx,
+                  heronarts.lx.studio.LXStudio.UI ui) {
   // Modify the UI theme if you like
 }
 
-void onUIReady(heronarts.lx.studio.LXStudio lx, heronarts.lx.studio.LXStudio.UI ui) {
+void onUIReady(heronarts.lx.studio.LXStudio lx,
+               heronarts.lx.studio.LXStudio.UI ui) {
   // Add custom UI components here
 }
 
 void draw() {
-  // Nothing needs to happen here, this method just needs to exist for Processing
-  // to run a draw loop. You should not need to do anything here.
+  // Nothing needs to happen here, this method just needs to exist for
+  // Processing to run a draw loop. You should not need to do anything here.
 }
 
 // Helpful global constants
