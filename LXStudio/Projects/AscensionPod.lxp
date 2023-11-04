@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1698306130188,
+  "timestamp": 1699135863245,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -44,7 +44,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -56,7 +56,7 @@
           "byteOrder": 0,
           "transport": 0,
           "reverse": false,
-          "host": "127.0.0.1",
+          "host": "3.3.3.3",
           "port": 7890,
           "dmxChannel": 1,
           "artNetUniverse": 0,
@@ -70,7 +70,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5102,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -84,7 +84,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -99,7 +99,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 1,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -110,7 +110,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5103,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -124,7 +124,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -139,7 +139,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 2,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -150,7 +150,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5104,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -164,7 +164,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -179,7 +179,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 3,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -190,7 +190,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5105,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -204,7 +204,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -219,7 +219,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 4,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -230,7 +230,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5106,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -244,7 +244,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -259,7 +259,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 5,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -270,7 +270,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5107,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -284,7 +284,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -299,7 +299,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 6,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -310,7 +310,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5108,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -324,7 +324,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -339,7 +339,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 7,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -350,7 +350,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5109,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -364,7 +364,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -379,7 +379,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 8,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -390,7 +390,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5110,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -404,7 +404,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -419,7 +419,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 9,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -430,7 +430,7 @@
         "children": {}
       },
       {
-        "id": 93,
+        "id": 5111,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
@@ -444,7 +444,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -459,7 +459,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 10,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -469,15 +469,15 @@
         },
         "children": {}
       },
-            {
-        "id": 93,
+      {
+        "id": 5112,
         "class": "heronarts.lx.structure.StripFixture",
         "internal": {
           "modulationColor": 0
         },
         "parameters": {
           "label": "Upright Strip 12",
-          "x": 0,
+          "x": 0.0,
           "y": 0.0,
           "z": 17.375,
           "yaw": 0.0,
@@ -499,7 +499,7 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "artNetUniverse": 11,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -794,7 +794,61 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.9974793260539214
+            "basis": 0.5926429782670445
+          },
+          {
+            "id": 5141,
+            "class": "heronarts.lx.modulator.VariableLFO",
+            "internal": {
+              "modulationColor": 0
+            },
+            "parameters": {
+              "label": "SAW1",
+              "running": true,
+              "trigger": false,
+              "loop": true,
+              "tempoSync": false,
+              "tempoMultiplier": 5,
+              "tempoLock": true,
+              "clockMode": 0,
+              "periodFast": 1000.0,
+              "periodSlow": 10000.0,
+              "wave": 0,
+              "skew": 0.0,
+              "shape": 0.0,
+              "bias": 0.0,
+              "phase": 0.0,
+              "exp": 0.0
+            },
+            "children": {},
+            "basis": 0.5680000000000176
+          },
+          {
+            "id": 5183,
+            "class": "heronarts.lx.modulator.VariableLFO",
+            "internal": {
+              "modulationColor": 0
+            },
+            "parameters": {
+              "label": "SAW2",
+              "running": true,
+              "trigger": false,
+              "loop": true,
+              "tempoSync": false,
+              "tempoMultiplier": 5,
+              "tempoLock": true,
+              "clockMode": 0,
+              "periodFast": 1000.0,
+              "periodSlow": 10000.0,
+              "wave": 0,
+              "skew": 0.0,
+              "shape": 0.0,
+              "bias": 0.0,
+              "phase": 0.0,
+              "exp": 0.0
+            },
+            "children": {},
+            "basis": 0.2630000000000008
           }
         ],
         "modulations": [
@@ -986,7 +1040,9 @@
       "cameraExpanded": true,
       "clipViewVisible": false,
       "modulatorExpanded": {
-        "50": true
+        "50": true,
+        "5141": true,
+        "5183": true
       },
       "preview": {
         "mode": 0,
