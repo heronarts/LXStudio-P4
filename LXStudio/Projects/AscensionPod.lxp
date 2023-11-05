@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699215030534,
+  "timestamp": 1699221764222,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -689,7 +689,7 @@
           "scene-5": false,
           "crossfader": 0.5,
           "crossfaderBlendMode": 0,
-          "focusedChannel": 0,
+          "focusedChannel": 2,
           "cueA": false,
           "cueB": false,
           "viewCondensed": false
@@ -722,8 +722,8 @@
             "parameters": {
               "label": "Gradient",
               "arm": false,
-              "selected": true,
-              "enabled": true,
+              "selected": false,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -743,7 +743,39 @@
               "triggerPatternCycle": false
             },
             "children": {},
-            "effects": [],
+            "effects": [
+              {
+                "id": 5480,
+                "class": "LXStudio$BaseMaskEffect",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false
+                },
+                "parameters": {
+                  "label": "BaseMask",
+                  "enabled": true,
+                  "maskChoice": 0
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5481,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              }
+            ],
             "clips": [],
             "patternIndex": 0,
             "patterns": [
@@ -982,7 +1014,7 @@
                     "exp": 0.0
                   },
                   "children": {},
-                  "basis": 0.5517681936143297
+                  "basis": 0.650798918018566
                 }
               }
             ]
@@ -995,10 +1027,10 @@
               "controlsExpanded": true
             },
             "parameters": {
-              "label": "Channel-3",
+              "label": "countdown",
               "arm": false,
-              "selected": false,
-              "enabled": false,
+              "selected": true,
+              "enabled": true,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1018,10 +1050,79 @@
               "triggerPatternCycle": false
             },
             "children": {},
-            "effects": [],
+            "effects": [
+              {
+                "id": 5660,
+                "class": "LXStudio$BaseMaskEffect",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false
+                },
+                "parameters": {
+                  "label": "BaseMask",
+                  "enabled": true,
+                  "maskChoice": 0
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5661,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              }
+            ],
             "clips": [],
-            "patternIndex": -1,
-            "patterns": []
+            "patternIndex": 0,
+            "patterns": [
+              {
+                "id": 5576,
+                "class": "LXStudio$CountdownPattern",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false,
+                  "autoCycleEligible": true
+                },
+                "parameters": {
+                  "label": "Countdown",
+                  "recall": false,
+                  "brightnessPeriod": 2000.0,
+                  "myColor/brightness": 100.0,
+                  "myColor/saturation": 100.0,
+                  "myColor/hue": 0.0,
+                  "restart": false
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5577,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              }
+            ]
           }
         ]
       },
@@ -1061,7 +1162,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.9904198633413518
+            "basis": 0.5820248752968648
           }
         ],
         "modulations": [

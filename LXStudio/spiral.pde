@@ -50,7 +50,7 @@ public
     try {
       FileHandler fh;
       this.logger = Logger.getLogger("MyLog");
-      fh = new FileHandler("mylog.log", true);
+      fh = new FileHandler("/tmp/mylog.log", true);
       this.logger.addHandler(fh);
       MyFormatter formatter = new MyFormatter();
       fh.setFormatter(formatter);
