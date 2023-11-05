@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699149655024,
+  "timestamp": 1699151993113,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -44,7 +44,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": false,
+          "selected": true,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -56,7 +56,7 @@
           "byteOrder": 0,
           "transport": 0,
           "reverse": false,
-          "host": "3.3.3.3",
+          "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 1,
           "artNetUniverse": 0,
@@ -484,7 +484,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -647,7 +647,7 @@
           "scene-5": false,
           "crossfader": 0.5,
           "crossfaderBlendMode": 0,
-          "focusedChannel": 0,
+          "focusedChannel": 2,
           "cueA": false,
           "cueB": false,
           "viewCondensed": false
@@ -680,8 +680,8 @@
             "parameters": {
               "label": "Gradient",
               "arm": false,
-              "selected": true,
-              "enabled": true,
+              "selected": false,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -697,13 +697,13 @@
               "transitionEnabled": false,
               "transitionTimeSecs": 3.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 2,
+              "focusedPattern": 0,
               "triggerPatternCycle": false
             },
             "children": {},
             "effects": [],
             "clips": [],
-            "patternIndex": 2,
+            "patternIndex": 0,
             "patterns": [
               {
                 "id": 48,
@@ -809,8 +809,8 @@
                   "label": "Spiral",
                   "recall": false,
                   "spiralSize": 0.4400000013411045,
-                  "rotationPeriod": 2799.999959766865,
-                  "verticalPeriod": 1799.9999821186066
+                  "rotationPeriod": 693.0000068619846,
+                  "verticalPeriod": 1848.9999810233712
                 },
                 "children": {
                   "modulation": {
@@ -840,12 +840,12 @@
               "controlsExpanded": true
             },
             "parameters": {
-              "label": "Channel-2",
+              "label": "bars-swarm",
               "arm": false,
               "selected": false,
               "enabled": true,
               "cue": false,
-              "fader": 0.0,
+              "fader": 1.0,
               "crossfadeGroup": 0,
               "blendMode": 0,
               "midiMonitor": false,
@@ -881,14 +881,14 @@
                   "recall": false,
                   "minChunk": 2,
                   "maxChunk": 100,
-                  "chunkSize": 0.450000012293458,
+                  "chunkSize": 0.330000014975667,
                   "shift": 0.0,
                   "shiftRange": 1.0,
                   "alternate": false,
                   "sync": false,
                   "wrap": 0,
-                  "size": 0.19999999552965164,
-                  "fade": 0.2699999939650297,
+                  "size": 0.1700000185519457,
+                  "fade": 0.019999999552965164,
                   "invert": 0.0,
                   "swarmOn": false,
                   "swarmX": 0.5,
@@ -932,7 +932,7 @@
                     "clockMode": 0,
                     "periodFast": 374.19014150851876,
                     "periodSlow": 10000.0,
-                    "wave": 2,
+                    "wave": 3,
                     "skew": 0.0,
                     "shape": 0.0,
                     "bias": 0.0,
@@ -940,10 +940,46 @@
                     "exp": 0.0
                   },
                   "children": {},
-                  "basis": 0.16496019760308467
+                  "basis": 0.39261126206516944
                 }
               }
             ]
+          },
+          {
+            "id": 5331,
+            "class": "heronarts.lx.mixer.LXChannel",
+            "internal": {
+              "modulationColor": 0,
+              "controlsExpanded": true
+            },
+            "parameters": {
+              "label": "Channel-3",
+              "arm": false,
+              "selected": true,
+              "enabled": true,
+              "cue": false,
+              "fader": 1.0,
+              "crossfadeGroup": 0,
+              "blendMode": 0,
+              "midiMonitor": false,
+              "midiChannel": 16,
+              "viewEnabled": false,
+              "viewSelector": "",
+              "viewNormalization": 0,
+              "autoCycleEnabled": false,
+              "autoCycleMode": 0,
+              "autoCycleTimeSecs": 60.0,
+              "transitionEnabled": false,
+              "transitionTimeSecs": 5.0,
+              "transitionBlendMode": 0,
+              "focusedPattern": 0,
+              "triggerPatternCycle": false
+            },
+            "children": {},
+            "effects": [],
+            "clips": [],
+            "patternIndex": -1,
+            "patterns": []
           }
         ]
       },
@@ -983,7 +1019,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.9223418422198741
+            "basis": 0.7440841455574922
           }
         ],
         "modulations": [
