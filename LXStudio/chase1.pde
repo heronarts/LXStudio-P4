@@ -6,8 +6,7 @@ import java.util.logging.LogRecord;
 
 // Here is a fairly basic example pattern that renders a plane that can be moved
 // across one of the axes.
-@LXCategory(
-    "Form") public static class EthanChaseFirstPattern extends LXPattern {
+@LXCategory("Form") public static class SpiralPattern extends LXPattern {
   class MyFormatter extends Formatter {
     @Override public String format(LogRecord record) {
       return record.getMessage() + "\n"; // Just return the message
@@ -29,7 +28,7 @@ public
   Logger logger;
 
 public
-  EthanChaseFirstPattern(LX lx) {
+  SpiralPattern(LX lx) {
     super(lx);
     addParameter("centerDistance", this.centerDistance);
     addParameter("saw1blah", this.saw1Ms);
