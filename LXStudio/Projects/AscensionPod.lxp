@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699137357374,
+  "timestamp": 1699149655024,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -678,7 +678,7 @@
               "controlsExpanded": true
             },
             "parameters": {
-              "label": "Pattern",
+              "label": "Gradient",
               "arm": false,
               "selected": true,
               "enabled": true,
@@ -693,17 +693,17 @@
               "viewNormalization": 0,
               "autoCycleEnabled": false,
               "autoCycleMode": 0,
-              "autoCycleTimeSecs": 60.0,
+              "autoCycleTimeSecs": 10.0,
               "transitionEnabled": false,
-              "transitionTimeSecs": 5.0,
+              "transitionTimeSecs": 3.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 1,
+              "focusedPattern": 2,
               "triggerPatternCycle": false
             },
             "children": {},
             "effects": [],
             "clips": [],
-            "patternIndex": 1,
+            "patternIndex": 2,
             "patterns": [
               {
                 "id": 48,
@@ -755,8 +755,8 @@
                 "deviceVersion": -1
               },
               {
-                "id": 5226,
-                "class": "LXStudio$EthanChaseFirstPattern",
+                "id": 5209,
+                "class": "heronarts.lx.pattern.texture.SparklePattern",
                 "internal": {
                   "modulationColor": 0,
                   "expanded": true,
@@ -764,13 +764,23 @@
                   "autoCycleEligible": true
                 },
                 "parameters": {
-                  "label": "EthanChaseFirst",
+                  "label": "Sparkle",
                   "recall": false,
-                  "centerDistance": 0.4899999890476465
+                  "density": 50.0,
+                  "speed": 0.5,
+                  "variation": 25.0,
+                  "duration": 100.0,
+                  "sharp": 0.0,
+                  "waveshape": 0,
+                  "minInterval": 1.0,
+                  "maxInterval": 1.0,
+                  "baseLevel": 0.0,
+                  "minLevel": 75.0,
+                  "maxLevel": 100.0
                 },
                 "children": {
                   "modulation": {
-                    "id": 5227,
+                    "id": 5210,
                     "class": "heronarts.lx.modulation.LXModulationEngine",
                     "internal": {
                       "modulationColor": 0
@@ -785,6 +795,153 @@
                   }
                 },
                 "deviceVersion": -1
+              },
+              {
+                "id": 5268,
+                "class": "LXStudio$SpiralPattern",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false,
+                  "autoCycleEligible": true
+                },
+                "parameters": {
+                  "label": "Spiral",
+                  "recall": false,
+                  "spiralSize": 0.4400000013411045,
+                  "rotationPeriod": 2799.999959766865,
+                  "verticalPeriod": 1799.9999821186066
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5269,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              }
+            ]
+          },
+          {
+            "id": 5194,
+            "class": "heronarts.lx.mixer.LXChannel",
+            "internal": {
+              "modulationColor": 0,
+              "controlsExpanded": true
+            },
+            "parameters": {
+              "label": "Channel-2",
+              "arm": false,
+              "selected": false,
+              "enabled": true,
+              "cue": false,
+              "fader": 0.0,
+              "crossfadeGroup": 0,
+              "blendMode": 0,
+              "midiMonitor": false,
+              "midiChannel": 16,
+              "viewEnabled": false,
+              "viewSelector": "",
+              "viewNormalization": 0,
+              "autoCycleEnabled": false,
+              "autoCycleMode": 0,
+              "autoCycleTimeSecs": 60.0,
+              "transitionEnabled": false,
+              "transitionTimeSecs": 5.0,
+              "transitionBlendMode": 0,
+              "focusedPattern": 0,
+              "triggerPatternCycle": false
+            },
+            "children": {},
+            "effects": [],
+            "clips": [],
+            "patternIndex": 0,
+            "patterns": [
+              {
+                "id": 5206,
+                "class": "heronarts.lx.pattern.texture.SwarmPattern",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false,
+                  "autoCycleEligible": true
+                },
+                "parameters": {
+                  "label": "Swarm",
+                  "recall": false,
+                  "minChunk": 2,
+                  "maxChunk": 100,
+                  "chunkSize": 0.450000012293458,
+                  "shift": 0.0,
+                  "shiftRange": 1.0,
+                  "alternate": false,
+                  "sync": false,
+                  "wrap": 0,
+                  "size": 0.19999999552965164,
+                  "fade": 0.2699999939650297,
+                  "invert": 0.0,
+                  "swarmOn": false,
+                  "swarmX": 0.5,
+                  "swarmY": 0.5,
+                  "swarmSize": 0.5,
+                  "swarmFade": 0.5,
+                  "swarmBrightness": 0.5,
+                  "swarmPolarity": 0.0
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5207,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1,
+                "motion": {
+                  "id": 5208,
+                  "class": "heronarts.lx.modulator.VariableLFO",
+                  "internal": {
+                    "modulationColor": 0
+                  },
+                  "parameters": {
+                    "label": "Motion",
+                    "running": true,
+                    "trigger": false,
+                    "loop": true,
+                    "tempoSync": false,
+                    "tempoMultiplier": 5,
+                    "tempoLock": true,
+                    "clockMode": 0,
+                    "periodFast": 374.19014150851876,
+                    "periodSlow": 10000.0,
+                    "wave": 2,
+                    "skew": 0.0,
+                    "shape": 0.0,
+                    "bias": 0.0,
+                    "phase": 0.0,
+                    "exp": 0.0
+                  },
+                  "children": {},
+                  "basis": 0.16496019760308467
+                }
               }
             ]
           }
@@ -816,7 +973,7 @@
               "tempoMultiplier": 5,
               "tempoLock": true,
               "clockMode": 0,
-              "periodFast": 13686.227444543054,
+              "periodFast": 1965.8508040543747,
               "periodSlow": 10000.0,
               "wave": 0,
               "skew": 0.0,
@@ -826,61 +983,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.9273424105260963
-          },
-          {
-            "id": 5141,
-            "class": "heronarts.lx.modulator.VariableLFO",
-            "internal": {
-              "modulationColor": 0
-            },
-            "parameters": {
-              "label": "SAW1",
-              "running": true,
-              "trigger": false,
-              "loop": true,
-              "tempoSync": false,
-              "tempoMultiplier": 5,
-              "tempoLock": true,
-              "clockMode": 0,
-              "periodFast": 1000.0,
-              "periodSlow": 10000.0,
-              "wave": 0,
-              "skew": 0.0,
-              "shape": 0.0,
-              "bias": 0.0,
-              "phase": 0.0,
-              "exp": 0.0
-            },
-            "children": {},
-            "basis": 0.8350000000000293
-          },
-          {
-            "id": 5183,
-            "class": "heronarts.lx.modulator.VariableLFO",
-            "internal": {
-              "modulationColor": 0
-            },
-            "parameters": {
-              "label": "SAW2",
-              "running": true,
-              "trigger": false,
-              "loop": true,
-              "tempoSync": false,
-              "tempoMultiplier": 5,
-              "tempoLock": true,
-              "clockMode": 0,
-              "periodFast": 1000.0,
-              "periodSlow": 10000.0,
-              "wave": 0,
-              "skew": 0.0,
-              "shape": 0.0,
-              "bias": 0.0,
-              "phase": 0.0,
-              "exp": 0.0
-            },
-            "children": {},
-            "basis": 0.530000000000012
+            "basis": 0.9223418422198741
           }
         ],
         "modulations": [
@@ -894,7 +997,7 @@
               "parameterPath": "xAmount",
               "path": "/mixer/channel/1/pattern/1/xAmount"
             },
-            "id": 51,
+            "id": 5153,
             "class": "heronarts.lx.modulation.LXCompoundModulation",
             "internal": {
               "modulationColor": 0
@@ -903,7 +1006,7 @@
               "label": "LX",
               "enabled": true,
               "polarity": 0,
-              "range": -0.6500000339001417
+              "range": -0.5249999901279807
             },
             "children": {}
           }
@@ -1072,9 +1175,7 @@
       "cameraExpanded": true,
       "clipViewVisible": false,
       "modulatorExpanded": {
-        "50": true,
-        "5141": true,
-        "5183": true
+        "50": true
       },
       "preview": {
         "mode": 0,
@@ -1087,21 +1188,21 @@
         "centerPoint": false,
         "camera": {
           "active": false,
-          "radius": 302.2550553733986,
-          "theta": -10.199716659728438,
-          "phi": 0.2046990771777928,
-          "x": 0.0,
-          "y": 115.0,
-          "z": 0.0
+          "radius": 168.60586547851562,
+          "theta": 0.0,
+          "phi": 0.0,
+          "x": 0.08849906921386719,
+          "y": 56.20195770263672,
+          "z": 0.08849906921386719
         },
         "cue": [
           {
             "active": false,
-            "radius": 302.2550553733986,
-            "theta": -10.199716659728438,
-            "phi": 0.2046990771777928,
+            "radius": 120.0,
+            "theta": 0.0,
+            "phi": 0.0,
             "x": 0.0,
-            "y": 115.0,
+            "y": 0.0,
             "z": 0.0
           },
           {

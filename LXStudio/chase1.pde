@@ -13,29 +13,34 @@ import java.util.logging.LogRecord;
     }
   }
 
-  public final CompoundParameter centerDistance =
-      new CompoundParameter("centerDistance", 0, 1)
+  public final CompoundParameter spiralSize =
+      new CompoundParameter("spiralSize", 0.5, 0, 1)
           .setDescription("Blah center of the spiral");
 
 public
-  final CompoundParameter saw1Ms =
-      new CompoundParameter("saw1thing", 2000, 1000, 5000)
-          .setDescription("Blah saw1");
+  final CompoundParameter rotationPeriod =
+      new CompoundParameter("rotationPeriod", 2000, 100, 5000)
+          .setDescription("rotation period");
+public
+  final CompoundParameter verticalPeriod =
+      new CompoundParameter("verticalPeriod", 2000, 100, 5000)
+          .setDescription("vertical period");
 
-  SawLFO saw1 = new SawLFO("blahSAW1", 0, 1, saw1Ms);
-  SawLFO saw2 = new SawLFO("blahSAW2", 0, 1, 3000);
+  SawLFO rotationSaw = new SawLFO("rotationSaw", 0, 1, rotationPeriod);
+  SawLFO verticalSaw = new SawLFO("verticalSaw", 0, 1, verticalPeriod);
 
   Logger logger;
 
 public
   SpiralPattern(LX lx) {
     super(lx);
-    addParameter("centerDistance", this.centerDistance);
-    addParameter("saw1blah", this.saw1Ms);
-    addModulator(saw1);
-    addModulator(saw2);
-    saw1.start();
-    saw2.start();
+    addParameter("spiralSize", this.spiralSize);
+    addParameter("rotationPeriod", this.rotationPeriod);
+    addParameter("verticalPeriod", this.verticalPeriod);
+    addModulator(rotationSaw);
+    addModulator(verticalSaw);
+    rotationSaw.start();
+    verticalSaw.start();
     LX.error("test2");
     this.setupLogger();
     log("hello test");
@@ -59,11 +64,11 @@ public
 
 public
   void run(double deltaMs) {
-    float centerDistance = this.centerDistance.getValuef();
-    float saw1Value = this.saw1.getValuef();
-    float saw2Value = this.saw2.getValuef();
-    log("saw1: " + saw1Value + " saw2: " + saw2Value +
-        " centerDistance: " + centerDistance);
+    float spiralSize = this.spiralSize.getValuef();
+    float saw1Value = this.rotationSaw.getValuef();
+    float saw2Value = this.verticalSaw.getValuef();
+    log("rotationSaw: " + saw1Value + " verticalSaw: " + saw2Value +
+        " spiralSize: " + spiralSize);
 
     float y_center = saw2Value;
     float theta_center = saw1Value * 2 * PI;
@@ -79,8 +84,8 @@ public
       float distance_to_center =
           sqrt(pow(p.xn - x_center, 2) + pow(p.yn - y_center, 2) +
                pow(p.zn - z_center, 2));
-      if (distance_to_center < centerDistance) {
-        float brightness = 100 - distance_to_center * 100 / centerDistance;
+      if (distance_to_center < spiralSize) {
+        float brightness = 100 - distance_to_center * 100 / spiralSize;
         colors[p.index] = LXColor.gray(brightness);
       } else {
         colors[p.index] = LXColor.gray(0);
