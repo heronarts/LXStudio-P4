@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699151993113,
+  "timestamp": 1699214992882,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -44,7 +44,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -508,6 +508,48 @@
           "spacing": 1.102
         },
         "children": {}
+      },
+      {
+        "id": 5405,
+        "class": "heronarts.lx.structure.ArcFixture",
+        "internal": {
+          "modulationColor": 0
+        },
+        "parameters": {
+          "label": "Arc 13",
+          "x": 0.0,
+          "y": -3.0,
+          "z": 0.0,
+          "yaw": 0.0,
+          "pitch": 90.0,
+          "roll": 180.0,
+          "scale": 1.0,
+          "selected": true,
+          "deactivate": false,
+          "enabled": true,
+          "brightness": 1.0,
+          "identify": false,
+          "mute": false,
+          "solo": false,
+          "tags": "strip arc",
+          "protocol": 0,
+          "byteOrder": 0,
+          "transport": 0,
+          "reverse": false,
+          "host": "127.0.0.1",
+          "port": 7890,
+          "dmxChannel": 0,
+          "artNetUniverse": 0,
+          "opcChannel": 0,
+          "opcOffset": 0,
+          "ddpDataOffset": 0,
+          "kinetPort": 1,
+          "numPoints": 100,
+          "radius": 17.0,
+          "degrees": 360.0,
+          "positionMode": 1
+        },
+        "children": {}
       }
     ]
   },
@@ -647,7 +689,7 @@
           "scene-5": false,
           "crossfader": 0.5,
           "crossfaderBlendMode": 0,
-          "focusedChannel": 2,
+          "focusedChannel": 0,
           "cueA": false,
           "cueB": false,
           "viewCondensed": false
@@ -680,8 +722,8 @@
             "parameters": {
               "label": "Gradient",
               "arm": false,
-              "selected": false,
-              "enabled": false,
+              "selected": true,
+              "enabled": true,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -843,7 +885,7 @@
               "label": "bars-swarm",
               "arm": false,
               "selected": false,
-              "enabled": true,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -940,7 +982,7 @@
                     "exp": 0.0
                   },
                   "children": {},
-                  "basis": 0.39261126206516944
+                  "basis": 0.5517681936143297
                 }
               }
             ]
@@ -955,8 +997,8 @@
             "parameters": {
               "label": "Channel-3",
               "arm": false,
-              "selected": true,
-              "enabled": true,
+              "selected": false,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1009,17 +1051,17 @@
               "tempoMultiplier": 5,
               "tempoLock": true,
               "clockMode": 0,
-              "periodFast": 1965.8508040543747,
+              "periodFast": 7863.04123390205,
               "periodSlow": 10000.0,
-              "wave": 0,
+              "wave": 3,
               "skew": 0.0,
-              "shape": 0.0,
+              "shape": -1.0,
               "bias": 0.0,
               "phase": 0.0,
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.7440841455574922
+            "basis": 0.20206903571693335
           }
         ],
         "modulations": [
@@ -1191,13 +1233,13 @@
         },
         "parameters": {
           "label": "OSC",
-          "receiveHost": "0.0.0.0",
+          "receiveHost": "127.0.0.1",
           "receivePort": 3030,
-          "receiveActive": false,
+          "receiveActive": true,
           "transmitHost": "localhost",
           "transmitPort": 3131,
           "transmitActive": false,
-          "logInput": false,
+          "logInput": true,
           "logOutput": false
         },
         "children": {}
@@ -1225,8 +1267,8 @@
         "camera": {
           "active": false,
           "radius": 168.60586547851562,
-          "theta": 0.0,
-          "phi": 0.0,
+          "theta": 2.146589742973447,
+          "phi": 0.37907230481505394,
           "x": 0.08849906921386719,
           "y": 56.20195770263672,
           "z": 0.08849906921386719
@@ -1234,12 +1276,12 @@
         "cue": [
           {
             "active": false,
-            "radius": 120.0,
-            "theta": 0.0,
-            "phi": 0.0,
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
+            "radius": 168.60586547851562,
+            "theta": 2.146589742973447,
+            "phi": 0.37907230481505394,
+            "x": 0.08849906921386719,
+            "y": 56.20195770263672,
+            "z": 0.08849906921386719
           },
           {
             "active": false,
