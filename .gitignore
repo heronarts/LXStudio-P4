@@ -7,4 +7,4 @@ application.windows64
 application.macosx
 .lxproject
 .lxpreferences
-
+*.class

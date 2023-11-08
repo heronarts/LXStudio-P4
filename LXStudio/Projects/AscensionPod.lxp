@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699221764222,
+  "timestamp": 1699428358173,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -689,7 +689,7 @@
           "scene-5": false,
           "crossfader": 0.5,
           "crossfaderBlendMode": 0,
-          "focusedChannel": 2,
+          "focusedChannel": 0,
           "cueA": false,
           "cueB": false,
           "viewCondensed": false
@@ -722,8 +722,8 @@
             "parameters": {
               "label": "Gradient",
               "arm": false,
-              "selected": false,
-              "enabled": false,
+              "selected": true,
+              "enabled": true,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -739,45 +739,13 @@
               "transitionEnabled": false,
               "transitionTimeSecs": 3.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 0,
+              "focusedPattern": 3,
               "triggerPatternCycle": false
             },
             "children": {},
-            "effects": [
-              {
-                "id": 5480,
-                "class": "LXStudio$BaseMaskEffect",
-                "internal": {
-                  "modulationColor": 0,
-                  "expanded": true,
-                  "modulationExpanded": false
-                },
-                "parameters": {
-                  "label": "BaseMask",
-                  "enabled": true,
-                  "maskChoice": 0
-                },
-                "children": {
-                  "modulation": {
-                    "id": 5481,
-                    "class": "heronarts.lx.modulation.LXModulationEngine",
-                    "internal": {
-                      "modulationColor": 0
-                    },
-                    "parameters": {
-                      "label": "Modulation"
-                    },
-                    "children": {},
-                    "modulators": [],
-                    "modulations": [],
-                    "triggers": []
-                  }
-                },
-                "deviceVersion": -1
-              }
-            ],
+            "effects": [],
             "clips": [],
-            "patternIndex": 0,
+            "patternIndex": 3,
             "patterns": [
               {
                 "id": 48,
@@ -889,6 +857,44 @@
                 "children": {
                   "modulation": {
                     "id": 5269,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              },
+              {
+                "id": 5748,
+                "class": "LXStudio$ImagePattern",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false,
+                  "autoCycleEligible": true
+                },
+                "parameters": {
+                  "label": "Image",
+                  "recall": false,
+                  "sweepPeriod": 1000.0,
+                  "ringDistance": 0.0,
+                  "width": 0.0,
+                  "fade": 0.0,
+                  "myColor/brightness": 100.0,
+                  "myColor/saturation": 100.0,
+                  "myColor/hue": 0.0
+                },
+                "children": {
+                  "modulation": {
+                    "id": 5749,
                     "class": "heronarts.lx.modulation.LXModulationEngine",
                     "internal": {
                       "modulationColor": 0
@@ -1029,8 +1035,8 @@
             "parameters": {
               "label": "countdown",
               "arm": false,
-              "selected": true,
-              "enabled": true,
+              "selected": false,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1162,7 +1168,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.5820248752968648
+            "basis": 0.7665380962292616
           }
         ],
         "modulations": [
