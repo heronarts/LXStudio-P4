@@ -69,7 +69,8 @@ public
                       this.myColor.saturation.getValuef(), bright);
     }
 
-    log("brightness: " + bright + "vs" + this.myColor.brightness.getValuef() +
-        "hue" + this.myColor.hue.getValuef());
+    // log("brightness: " + bright + "vs" + this.myColor.brightness.getValuef()
+    // +
+    //     "hue" + this.myColor.hue.getValuef());
   }
 }

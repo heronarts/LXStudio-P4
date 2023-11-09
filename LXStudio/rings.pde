@@ -67,10 +67,9 @@ public
   void run(double deltaMs) {
     float centerY = this.centerY.getValuef();
     // float centerY = 0;
-    if (centerY < .1) {
-
-      log("centerY: " + centerY);
-    }
+    // if (centerY < .1) {
+    //   log("centerY: " + centerY);
+    // }
     float ringDistance = this.ringDistance.getValuef();
     float width = this.width.getValuef();
     float fade = this.fade.getValuef();
