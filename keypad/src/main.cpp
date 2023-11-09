@@ -7,7 +7,8 @@ struct Button {
 };
 
 uint8_t correct_num = 0;
-const uint8_t password[] = {1, 9, 9, 2};
+const uint8_t password[] = {1, 9, 3, 2}; // Order doesn't matter, no duplicates.
+bool password_hit[] = {false, false, false, false};
 uint8_t leds[] = {19, 22, 21, 18};
 
 Button button1 = {26, 1};
@@ -32,11 +33,10 @@ long long lastSignalChangeMs[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void reset() {
   digitalWrite(PI_COMM_PIN, LOW);
-  digitalWrite(leds[0], LOW);
-  digitalWrite(leds[1], LOW);
-  digitalWrite(leds[2], LOW);
-  digitalWrite(leds[3], LOW);
-  digitalWrite(PI_COMM_PIN, LOW);
+  for (int i = 0; i < 4; i++) {
+    digitalWrite(leds[i], LOW);
+    password_hit[i] = false;
+  }
   correct_num = 0;
 }
 
@@ -90,8 +90,18 @@ void leds_win() {
   }
 }
 
+bool next_button_correct(Button button) {
+  for (int i = 0; i < 4; i++) {
+    if (password[i] == button.NUMBER && !password_hit[i]) {
+      password_hit[i] = true;
+      return true;
+    }
+  }
+  return false;
+}
+
 void check_code(Button button) {
-  if (button.NUMBER == password[correct_num]) {
+  if (next_button_correct(button)) {
     digitalWrite(leds[correct_num], HIGH);
     correct_num++;
   } else {
