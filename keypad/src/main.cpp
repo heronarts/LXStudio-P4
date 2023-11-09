@@ -31,8 +31,16 @@ bool pressed[] = {false, false, false, false, false, false,
                   false, false, false, false, false, false};
 long long lastSignalChangeMs[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+void pi_begin_sequence(bool begin) {
+  if (begin) {
+    digitalWrite(PI_COMM_PIN, LOW);
+  } else {
+    digitalWrite(PI_COMM_PIN, HIGH);
+  }
+}
+
 void reset() {
-  digitalWrite(PI_COMM_PIN, LOW);
+  pi_begin_sequence(false);
   for (int i = 0; i < 4; i++) {
     digitalWrite(leds[i], LOW);
     password_hit[i] = false;
@@ -110,7 +118,7 @@ void check_code(Button button) {
   }
   if (correct_num == 4) {
     Serial.println("Correct!");
-    digitalWrite(PI_COMM_PIN, HIGH);
+    pi_begin_sequence(true);
     leds_win();
     reset();
   }
@@ -119,6 +127,7 @@ void check_code(Button button) {
 void setup() {
   // LEDS
   pinMode(PI_COMM_PIN, OUTPUT);
+  pi_begin_sequence(false);
   pinMode(leds[0], OUTPUT);
   pinMode(leds[1], OUTPUT);
   pinMode(leds[2], OUTPUT);
