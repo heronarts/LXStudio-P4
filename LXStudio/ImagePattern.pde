@@ -109,6 +109,14 @@ import javax.imageio.ImageIO;
       new CompoundParameter("pCenterImgY", 0, 0, 300)
           .setDescription("pCenterImgY");
 
+  // CompoundParameter pScaleImgX = new CompoundParameter("pScaleImgX", 1, -10,
+  // 10)
+  //                                    .setDescription("pScaleImgX");
+
+  // CompoundParameter pScaleImgY = new CompoundParameter("pScaleImgY", 1, -10,
+  // 10)
+  //                                    .setDescription("pScaleImgY");
+
   // SawLFO centerY = new SawLFO("centerY", 1, 0, sweepPeriod);
   float centerImgX;
   float centerImgY;
@@ -121,6 +129,8 @@ public
 
     addParameter("pCenterImgX", this.pCenterImgX);
     addParameter("pCenterImgY", this.pCenterImgY);
+    // addParameter("pScaleImgX", this.pScaleImgX);
+    // addParameter("pScaleImgY", this.pScaleImgY);
     // addModulator(centerY);
     // centerY.start();
 
@@ -131,7 +141,7 @@ public
     //     "image-read/lion.png");
     this.imageReader = new ImageReader(
         "/Users/chase/clones-third-party/LXStudio-AscensionPod/" +
-        "image-read/diag.jpeg");
+        "image-read/diag_blurred.jpeg");
   }
 
   void setupLogger() {
@@ -156,20 +166,17 @@ public
     // float ySpeed = 0.2f;
     // this.centerImgX += xSpeed; // * deltaMs / 1000;
     // this.centerImgY += ySpeed; // * deltaMs / 1000;
-    // log("centerImgX: " + this.centerImgX + ", centerImgY: " +
-    // this.centerImgY);
     this.centerImgX = this.pCenterImgX.getValuef();
     this.centerImgY = this.pCenterImgY.getValuef();
     for (LXPoint p : model.points) {
-      float imgX = (float)Math.atan2(p.zn - 0.5, p.xn - 0.5) / (2 * PI) * 100f;
+      float imgX =
+          (((float)Math.atan2(p.zn - 0.5, p.xn - 0.5) / (PI)) + 1) * 100f;
       imgX += this.centerImgX;
 
       float imgY = p.yn * 100f;
       imgY += this.centerImgY;
       int[] rgb = this.imageReader.getColor(imgX, imgY);
-      if (p.index == 0) {
-        log("rgb: " + rgb[0] + ", " + rgb[1] + ", " + rgb[2]);
-      }
+
       colors[p.index] = LXColor.rgb(rgb[0], rgb[1], rgb[2]);
     }
   }
