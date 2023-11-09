@@ -7,7 +7,7 @@ struct Button {
 };
 
 uint8_t correct_num = 0;
-const uint8_t password[] = {1, 2, 3, 4}; // NO duplicates, I think
+const uint8_t password[] = {1, 9, 9, 2};
 uint8_t leds[] = {19, 22, 21, 18};
 
 Button button1 = {26, 1};
@@ -36,10 +36,11 @@ void reset() {
   digitalWrite(leds[1], LOW);
   digitalWrite(leds[2], LOW);
   digitalWrite(leds[3], LOW);
+  digitalWrite(PI_COMM_PIN, LOW);
   correct_num = 0;
 }
 
-void flash_leds() {
+void leds_lose() {
   for (int i = 0; i < 10; i++) {
     digitalWrite(leds[0], HIGH);
     digitalWrite(leds[1], HIGH);
@@ -54,17 +55,54 @@ void flash_leds() {
   }
 }
 
+void leds_win() {
+  digitalWrite(leds[0], LOW);
+  digitalWrite(leds[1], LOW);
+  digitalWrite(leds[2], LOW);
+  digitalWrite(leds[3], LOW);
+  for (int i = 0; i < 3; i++) {
+    digitalWrite(leds[0], HIGH);
+    delay(100);
+    digitalWrite(leds[1], HIGH);
+    delay(100);
+    digitalWrite(leds[2], HIGH);
+    delay(100);
+    digitalWrite(leds[3], HIGH);
+    delay(100);
+    digitalWrite(leds[0], LOW);
+    digitalWrite(leds[1], LOW);
+    digitalWrite(leds[2], LOW);
+    digitalWrite(leds[3], LOW);
+    delay(100);
+  }
+  delay(150);
+  for (int i = 0; i < 3; i++) {
+    digitalWrite(leds[0], HIGH);
+    digitalWrite(leds[1], HIGH);
+    digitalWrite(leds[2], HIGH);
+    digitalWrite(leds[3], HIGH);
+    delay(250);
+    digitalWrite(leds[0], LOW);
+    digitalWrite(leds[1], LOW);
+    digitalWrite(leds[2], LOW);
+    digitalWrite(leds[3], LOW);
+    delay(250);
+  }
+}
+
 void check_code(Button button) {
   if (button.NUMBER == password[correct_num]) {
     digitalWrite(leds[correct_num], HIGH);
     correct_num++;
   } else {
+    leds_lose();
     reset();
-    flash_leds();
   }
   if (correct_num == 4) {
-    digitalWrite(PI_COMM_PIN, HIGH);
     Serial.println("Correct!");
+    digitalWrite(PI_COMM_PIN, HIGH);
+    leds_win();
+    reset();
   }
 }
 
