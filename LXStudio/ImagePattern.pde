@@ -10,7 +10,8 @@ import javax.imageio.ImageIO;
 
 // Here is a fairly basic example pattern that renders a plane that can be moved
 // across one of the axes.
-@LXCategory("Ascension") public static class ImagePattern extends LXPattern {
+@LXCategory("Ascension") public static class ImagePattern extends LXPattern
+    implements UIDeviceControls<ImagePattern> {
 
   class ImageReader {
   private
@@ -117,6 +118,13 @@ import javax.imageio.ImageIO;
       new CompoundParameter("sweepPeriodY", 5500, 2000, 20000)
           .setDescription("sweepPeriodY");
 
+  ObjectParameter<String> fname =
+      new ObjectParameter<String>(
+          "filename",
+          new String[]{"diag_blurred.jpeg", "lion.png", "debug.png"})
+          .setDescription("filename of image");
+  String currentFname = "";
+
   // CompoundParameter pScaleImgX = new CompoundParameter("pScaleImgX", 1, -10,
   // 10)
   //                                    .setDescription("pScaleImgX");
@@ -129,8 +137,6 @@ import javax.imageio.ImageIO;
   // look more unique
   SinLFO centerX = new SinLFO("centerX", 0, 1, sweepPeriodX);
   SinLFO centerY = new SinLFO("centerY", 0, 1, sweepPeriodY);
-  float centerImgX;
-  float centerImgY;
   ImageReader imageReader;
 
 public
@@ -142,21 +148,11 @@ public
     // addParameter("pCenterImgY", this.pCenterImgY);
     addParameter("sweepPeriodX", this.sweepPeriodX);
     addParameter("sweepPeriodY", this.sweepPeriodY);
-    // addParameter("pScaleImgX", this.pScaleImgX);
-    // addParameter("pScaleImgY", this.pScaleImgY);
+    addParameter("fname", this.fname);
     addModulator(this.centerX);
     addModulator(this.centerY);
     centerX.start();
     centerY.start();
-
-    this.centerImgX = 0f;
-    this.centerImgY = 0f;
-    // this.imageReader = new ImageReader(
-    //     "/Users/chase/clones-third-party/LXStudio-AscensionPod/" +
-    //     "image-read/lion.png");
-    this.imageReader = new ImageReader(
-        "/Users/chase/clones-third-party/LXStudio-AscensionPod/" +
-        "image-read/diag_blurred.jpeg");
   }
 
   void setupLogger() {
@@ -177,22 +173,35 @@ public
 
 public
   void run(double deltaMs) {
+    if (this.currentFname != this.fname.getObject()) {
+      this.currentFname = this.fname.getObject();
+      this.imageReader = new ImageReader(
+          "/Users/chase/clones-third-party/LXStudio-AscensionPod/" +
+          "image-read/" + this.currentFname);
+    }
     // float xSpeed = 0.2f;
     // float ySpeed = 0.2f;
     // this.centerImgX += xSpeed; // * deltaMs / 1000;
     // this.centerImgY += ySpeed; // * deltaMs / 1000;
-    this.centerImgX = this.centerX.getValuef() * this.imageReader.width;
-    this.centerImgY = this.centerY.getValuef() * this.imageReader.height;
+    float centerImgX = centerX.getValuef() * this.imageReader.width;
+    float centerImgY = centerY.getValuef() * this.imageReader.height;
     for (LXPoint p : model.points) {
       float imgX =
           (((float)Math.atan2(p.zn - 0.5, p.xn - 0.5) / (PI)) + 1) * 100f;
-      imgX += this.centerImgX;
+      imgX += centerImgX;
 
       float imgY = p.yn * 100f;
-      imgY += this.centerImgY;
+      imgY += centerImgY;
       int[] rgb = this.imageReader.getColor(imgX, imgY);
 
       colors[p.index] = LXColor.rgb(rgb[0], rgb[1], rgb[2]);
     }
+  }
+
+  @Override public void buildDeviceControls(UI ui, UIDevice uiDevice,
+                                            ImagePattern pattern) {
+    uiDevice.setContentWidth(COL_WIDTH);
+    addColumn(uiDevice, COL_WIDTH, "img", newDropMenu(pattern.fname),
+              newKnob(pattern.sweepPeriodX), newKnob(pattern.sweepPeriodY));
   }
 }
