@@ -8,19 +8,21 @@ struct Button {
 
 uint8_t correct_num = 0;
 const uint8_t password[] = {1, 2, 3, 4}; // NO duplicates, I think
-uint8_t leds[] = {18, 19, 21, 22};
-Button button1 = {15, 1};
-Button button2 = {4, 2};
-Button button3 = {16, 3};
-Button button4 = {17, 4};
-Button button5 = {32, 5};
-Button button6 = {33, 6};
-Button button7 = {25, 7};
-Button button8 = {26, 8};
-Button button9 = {27, 9};
-Button button10 = {14, 10};
-Button button11 = {12, 11};
-Button button12 = {13, 12};
+uint8_t leds[] = {19, 22, 21, 18};
+
+Button button1 = {26, 1};
+Button button2 = {12, 2};
+Button button3 = {13, 3};
+Button button4 = {4, 4};
+Button button5 = {27, 5};
+Button button6 = {16, 6};
+Button button7 = {17, 7};
+Button button8 = {15, 8};
+Button button9 = {32, 9};
+Button button10 = {33, 10};
+Button button11 = {25, 11};
+Button button12 = {14, 12};
+
 const int NUM_BUTTONS = 12;
 Button buttons[] = {button1, button2, button3, button4,  button5,  button6,
                     button7, button8, button9, button10, button11, button12};
@@ -101,8 +103,11 @@ void loop() {
       pressed[i] = state;
       lastSignalChangeMs[i] = millis();
       if (state == LOW) {
-        Serial.print("Pressed: ");
-        Serial.println(buttons[i].NUMBER);
+        Serial.print("Pressed num:");
+        Serial.print(buttons[i].NUMBER);
+        Serial.print(", pin: ");
+        Serial.println(buttons[i].PIN);
+
         check_code(buttons[i]);
       }
     }
