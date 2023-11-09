@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699559114143,
+  "timestamp": 1699559514515,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -44,7 +44,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": false,
+          "selected": true,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -58,8 +58,8 @@
           "reverse": false,
           "host": "127.0.0.1",
           "port": 7890,
-          "dmxChannel": 1,
-          "artNetUniverse": 0,
+          "dmxChannel": 0,
+          "artNetUniverse": 13,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -524,7 +524,7 @@
           "pitch": 90.0,
           "roll": 180.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -532,7 +532,7 @@
           "mute": false,
           "solo": false,
           "tags": "strip arc",
-          "protocol": 0,
+          "protocol": 1,
           "byteOrder": 1,
           "transport": 0,
           "reverse": false,
@@ -1460,7 +1460,7 @@
                     "exp": 0.0
                   },
                   "children": {},
-                  "basis": 0.43800000000064954
+                  "basis": 0.7090000000007767
                 }
               }
             ]
@@ -1478,7 +1478,7 @@
               "selected": true,
               "enabled": true,
               "cue": false,
-              "fader": 0.31428571604192257,
+              "fader": 0.34285714477300644,
               "crossfadeGroup": 0,
               "blendMode": 0,
               "midiMonitor": false,
@@ -1589,7 +1589,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.14436698821119373
+            "basis": 0.8686375322715552
           }
         ],
         "modulations": [
