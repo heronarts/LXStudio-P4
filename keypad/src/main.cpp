@@ -29,18 +29,16 @@ bool pressed[] = {false, false, false, false, false, false,
 long long lastSignalChangeMs[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void reset() {
-  // tmp
-  // digitalWrite(PI_COMM_PIN, LOW);
-  // digitalWrite(leds[0], LOW);
-  // digitalWrite(leds[1], LOW);
-  // digitalWrite(leds[2], LOW);
-  // digitalWrite(leds[3], LOW);
+  digitalWrite(PI_COMM_PIN, LOW);
+  digitalWrite(leds[0], LOW);
+  digitalWrite(leds[1], LOW);
+  digitalWrite(leds[2], LOW);
+  digitalWrite(leds[3], LOW);
   correct_num = 0;
 }
 
 void flash_leds() {
-  return; // tmp
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 10; i++) {
     digitalWrite(leds[0], HIGH);
     digitalWrite(leds[1], HIGH);
     digitalWrite(leds[2], HIGH);
@@ -56,7 +54,7 @@ void flash_leds() {
 
 void check_code(Button button) {
   if (button.NUMBER == password[correct_num]) {
-    // digitalWrite(leds[correct_num], HIGH); // tmp
+    digitalWrite(leds[correct_num], HIGH);
     correct_num++;
   } else {
     reset();
@@ -94,20 +92,6 @@ void setup() {
   Serial.println("Hello");
 }
 
-void leds_on() {
-  digitalWrite(leds[0], HIGH);
-  digitalWrite(leds[1], HIGH);
-  digitalWrite(leds[2], HIGH);
-  digitalWrite(leds[3], HIGH);
-}
-
-void leds_off() {
-  digitalWrite(leds[0], LOW);
-  digitalWrite(leds[1], LOW);
-  digitalWrite(leds[2], LOW);
-  digitalWrite(leds[3], LOW);
-}
-
 void loop() {
   for (int i = 0; i < NUM_BUTTONS; i++) {
     bool state = digitalRead(buttons[i].PIN);
@@ -120,10 +104,6 @@ void loop() {
         Serial.print("Pressed: ");
         Serial.println(buttons[i].NUMBER);
         check_code(buttons[i]);
-        digitalWrite(PI_COMM_PIN, HIGH); // tmp
-        leds_on();
-      } else {
-        leds_off();
       }
     }
   }
