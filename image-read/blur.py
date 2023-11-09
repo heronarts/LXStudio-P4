@@ -1,4 +1,4 @@
-
+# pip install pillow
 from PIL import Image, ImageFilter
 
 def blur_image(input_filename):
