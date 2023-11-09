@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699428358173,
+  "timestamp": 1699502890038,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -884,13 +884,8 @@
                 "parameters": {
                   "label": "Image",
                   "recall": false,
-                  "sweepPeriod": 1000.0,
-                  "ringDistance": 0.0,
-                  "width": 0.0,
-                  "fade": 0.0,
-                  "myColor/brightness": 100.0,
-                  "myColor/saturation": 100.0,
-                  "myColor/hue": 0.0
+                  "sweepPeriodX": 14600.000120699406,
+                  "sweepPeriodY": 13160.000152885914
                 },
                 "children": {
                   "modulation": {
@@ -1168,7 +1163,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.7665380962292616
+            "basis": 0.5702249315626321
           }
         ],
         "modulations": [

@@ -101,13 +101,21 @@ import javax.imageio.ImageIO;
 
   Logger logger;
 
-  CompoundParameter pCenterImgX =
-      new CompoundParameter("pCenterImgX", 0, 0, 300)
-          .setDescription("pCenterImgX");
+  // CompoundParameter pCenterImgX =
+  //     new CompoundParameter("pCenterImgX", 0, 0, 300)
+  //         .setDescription("pCenterImgX");
 
-  CompoundParameter pCenterImgY =
-      new CompoundParameter("pCenterImgY", 0, 0, 300)
-          .setDescription("pCenterImgY");
+  // CompoundParameter pCenterImgY =
+  //     new CompoundParameter("pCenterImgY", 0, 0, 300)
+  //         .setDescription("pCenterImgY");
+
+  CompoundParameter sweepPeriodX =
+      new CompoundParameter("sweepPeriodX", 12000, 2000, 20000)
+          .setDescription("sweepPeriodX");
+
+  CompoundParameter sweepPeriodY =
+      new CompoundParameter("sweepPeriodY", 5500, 2000, 20000)
+          .setDescription("sweepPeriodY");
 
   // CompoundParameter pScaleImgX = new CompoundParameter("pScaleImgX", 1, -10,
   // 10)
@@ -117,7 +125,10 @@ import javax.imageio.ImageIO;
   // 10)
   //                                    .setDescription("pScaleImgY");
 
-  // SawLFO centerY = new SawLFO("centerY", 1, 0, sweepPeriod);
+  // Different numbers that don't have high common denominators make the effect
+  // look more unique
+  SinLFO centerX = new SinLFO("centerX", 0, 1, sweepPeriodX);
+  SinLFO centerY = new SinLFO("centerY", 0, 1, sweepPeriodY);
   float centerImgX;
   float centerImgY;
   ImageReader imageReader;
@@ -127,12 +138,16 @@ public
     super(lx);
     this.setupLogger();
 
-    addParameter("pCenterImgX", this.pCenterImgX);
-    addParameter("pCenterImgY", this.pCenterImgY);
+    // addParameter("pCenterImgX", this.pCenterImgX);
+    // addParameter("pCenterImgY", this.pCenterImgY);
+    addParameter("sweepPeriodX", this.sweepPeriodX);
+    addParameter("sweepPeriodY", this.sweepPeriodY);
     // addParameter("pScaleImgX", this.pScaleImgX);
     // addParameter("pScaleImgY", this.pScaleImgY);
-    // addModulator(centerY);
-    // centerY.start();
+    addModulator(this.centerX);
+    addModulator(this.centerY);
+    centerX.start();
+    centerY.start();
 
     this.centerImgX = 0f;
     this.centerImgY = 0f;
@@ -166,8 +181,8 @@ public
     // float ySpeed = 0.2f;
     // this.centerImgX += xSpeed; // * deltaMs / 1000;
     // this.centerImgY += ySpeed; // * deltaMs / 1000;
-    this.centerImgX = this.pCenterImgX.getValuef();
-    this.centerImgY = this.pCenterImgY.getValuef();
+    this.centerImgX = this.centerX.getValuef() * this.imageReader.width;
+    this.centerImgY = this.centerY.getValuef() * this.imageReader.height;
     for (LXPoint p : model.points) {
       float imgX =
           (((float)Math.atan2(p.zn - 0.5, p.xn - 0.5) / (PI)) + 1) * 100f;
