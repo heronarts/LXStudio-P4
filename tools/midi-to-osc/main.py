@@ -17,8 +17,10 @@ osc_mapping = {
         7:  '/lx/mixer/channel/2/fader',
         8:  '/lx/mixer/channel/4/pattern/1/sweepPeriod',
         11:  '/lx/mixer/channel/5/fader',
-        15:  '/lx/mixer/channel/6/fader'
-        23: '/lx/mixer/channel/6/pattern/1/Motion/periodFast',
+        15:  '/lx/mixer/channel/6/fader',
+        # 23: '/lx/mixer/channel/6/pattern/1/Motion/periodFast', # Doesn't work..
+        23: '/lx/mixer/channel/8/fader',
+        19: '/lx/mixer/channel/9/fader',
         }
 
 def handle_midi_message(message, data=None):
@@ -29,9 +31,8 @@ def handle_midi_message(message, data=None):
         print(cc, value)
     for osc_value, osc_path in osc_mapping.items():
         equal = cc == osc_value
-        print('compare', type(cc), type(osc_value), cc, osc_value, equal)
         if equal:
-            print(f'set cc: {cc} to {value}')
+            print(f'set cc: {osc_path} to {value}')
             osc_value = value / 127.0
             osc_client.send_message(osc_path, osc_value)
 
