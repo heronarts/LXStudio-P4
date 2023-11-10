@@ -13,6 +13,7 @@ Getting started with LXStudio was a struggle, but now that I understand how it w
   - [Core LXStudio Code](https://github.com/heronarts/LX)
 ## Notes and Gotchas
 - I made a [walkthrough/getting started video](https://www.youtube.com/watch?v=6oLdXEgbOgQ)!
+- The `LXStudio/ImagePattern.pde` pattern is pretty powerful. It allows you to pick some image, and then the LEDs will get mapped onto that image and "move around" over time. They move around in the X and Y direction via a sine wave. The periods of these sine waves are configurable to speed things up/slow them down. The code effectively creates an "infinite canvas" of the image, where the image is mirrored back and forth in all directions. In addition, when an LED is at a certain point in the image, we use bilinear interpolation to figure out what color it should be based on what colors it's near.
 - I don't know where all the LXStudio code is. I.e. I don't know where the UI code is. Maybe it's not open source?
 - Note that this repo simply has some pre-built JARs that are used. The only compilation that's running is the patterns you write.
 - The LXStudio interface is largely about "live" VJing. You could in theory have this run on a Raspberry Pi, and have a sibling application control it. Probably through OSC? See the midi-to-osc folder on how to do that. I'm not sure what the typically recommended way to do it is.
