@@ -121,16 +121,22 @@ import javax.imageio.ImageIO;
   ObjectParameter<String> fname =
       new ObjectParameter<String>("filename",
                                   new String[]{
+                                      "boots.jpeg",
+                                      "boots_blurred.jpeg",
                                       "f_blue_red.jpg",
                                       "f_blue_red_blurred.jpg",
                                       "f_green.jpg",
                                       "f_green_blurred.jpg",
                                       "lion.png",
                                       "lion_blurred.png",
+                                      "orange.jpeg",
+                                      "orange_blurred.jpeg",
                                       "planet.jpeg",
                                       "planet2.jpeg",
                                       "planet2_blurred.jpeg",
                                       "planet_blurred.jpeg",
+                                      "wing.jpeg",
+                                      "wing_blurred.jpeg",
 
                                   })
           .setDescription("filename of image");

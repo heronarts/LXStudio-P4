@@ -4,7 +4,7 @@ from PIL import Image, ImageFilter
 def blur_image(input_filename):
     with Image.open(input_filename) as img:
         # Apply a GaussianBlur filter
-        blurred_img = img.filter(ImageFilter.GaussianBlur(10))
+        blurred_img = img.filter(ImageFilter.GaussianBlur(5))
 
         # Construct the output filename by splitting the input filename
         name_parts = input_filename.rsplit(".", 1)
