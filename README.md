@@ -1,5 +1,21 @@
 All the Ascension Pod code and instructions are in this repo and the sibling repo here: https://github.com/theicfire/artnet-play. There's a variety of READMEs in various folders.
 
+# LXStudio
+Getting started with LXStudio was a struggle, but now that I understand how it works, I'm a big fan! Some quick things worth noting:
+- There are two ways to run LXStudio -- via the IDE or via Processing. This uses the Processing direction, because we couldn't figure out how to get the IDE version working. Here are the relevant instructions:
+  - LX Studio runs on top of Processing 4. [Download and install Processing 4 &rarr;](https://processing.org/download/)
+  - Download LXStudio-P4 and then clone this repo.
+  - You may need to install Java as well to get Processing to run.
+  - Next, open the LXStudio.pde project in Processing 4 and click Run.
+- Some LXStudio references:
+  - [LX Studio Wiki &rarr;](https://github.com/heronarts/LXStudio/wiki)
+  - [LX Studio API reference &rarr;](http://lx.studio/api/)
+  - [Core LXStudio Code](https://github.com/heronarts/LX)
+## Notes and Gotchas
+- I don't know where all the LXStudio code is. I.e. I don't know where the UI code is. Maybe it's not open source?
+- Note that this repo simply has some pre-built JARs that are used. The only compilation that's running is the patterns you write.
+- The LXStudio interface is largely about "live" VJing. You could in theory have this run on a Raspberry Pi, and have a sibling application control it. Probably through OSC? See the midi-to-osc folder on how to do that. I'm not sure what the typically recommended way to do it is.
+
 # Chroma Tech Controller Initial setup
 - Plug in power, leds, ethernet, and micro usb cable according to the [datasheet/wiring diagram](https://www.dropbox.com/scl/fi/zt8h76kfujvkiadot2hft/angio-8-spec-sheet_2023-06-26.pdf?rlkey=1cgoomvrvl1kbumfncs4wq463&dl=0)
     
