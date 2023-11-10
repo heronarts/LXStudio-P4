@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1699561948082,
+  "timestamp": 1699581130518,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -53,7 +53,7 @@
           "solo": false,
           "tags": "upstrip1",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -93,7 +93,7 @@
           "solo": false,
           "tags": "upstrip2",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -133,7 +133,7 @@
           "solo": false,
           "tags": "upstrip3",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -173,7 +173,7 @@
           "solo": false,
           "tags": "upstrip4",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -213,7 +213,7 @@
           "solo": false,
           "tags": "upstrip5",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -253,7 +253,7 @@
           "solo": false,
           "tags": "upstrip6",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -293,7 +293,7 @@
           "solo": false,
           "tags": "upstrip7",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -333,7 +333,7 @@
           "solo": false,
           "tags": "upstrip8",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -373,7 +373,7 @@
           "solo": false,
           "tags": "upstrip9",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -413,7 +413,7 @@
           "solo": false,
           "tags": "upstrip10",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -453,7 +453,7 @@
           "solo": false,
           "tags": "upstrip11",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -484,7 +484,7 @@
           "pitch": 0.0,
           "roll": 90.0,
           "scale": 1.0,
-          "selected": false,
+          "selected": true,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -493,7 +493,7 @@
           "solo": false,
           "tags": "upstrip12",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
@@ -524,7 +524,7 @@
           "pitch": 90.0,
           "roll": 180.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -533,13 +533,13 @@
           "solo": false,
           "tags": "strip arc",
           "protocol": 1,
-          "byteOrder": 0,
+          "byteOrder": 2,
           "transport": 0,
           "reverse": false,
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 0,
-          "artNetUniverse": 13,
+          "artNetUniverse": 12,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
@@ -689,7 +689,7 @@
           "scene-5": false,
           "crossfader": 0.508474575355649,
           "crossfaderBlendMode": 0,
-          "focusedChannel": 2,
+          "focusedChannel": 6,
           "cueA": false,
           "cueB": false,
           "viewCondensed": false
@@ -952,7 +952,7 @@
               "selected": false,
               "enabled": true,
               "cue": false,
-              "fader": 1.0,
+              "fader": 0.0,
               "crossfadeGroup": 0,
               "blendMode": 0,
               "midiMonitor": false,
@@ -975,7 +975,7 @@
             "parameters": {
               "label": "breath-base",
               "arm": false,
-              "selected": true,
+              "selected": false,
               "enabled": true,
               "cue": false,
               "fader": 1.0,
@@ -1156,7 +1156,7 @@
                   "fade": 0.029999999329447746,
                   "myColor/brightness": 100.0,
                   "myColor/saturation": 100.0,
-                  "myColor/hue": 0.0
+                  "myColor/hue": 237.00001525878906
                 },
                 "children": {
                   "modulation": {
@@ -1460,7 +1460,7 @@
                     "exp": 0.0
                   },
                   "children": {},
-                  "basis": 0.4972643252796921
+                  "basis": 0.6629596560018897
                 }
               }
             ]
@@ -1475,10 +1475,10 @@
             "parameters": {
               "label": "background",
               "arm": false,
-              "selected": false,
+              "selected": true,
               "enabled": true,
               "cue": false,
-              "fader": 0.0,
+              "fader": 0.4999999972060323,
               "crossfadeGroup": 0,
               "blendMode": 0,
               "midiMonitor": false,
@@ -1496,13 +1496,53 @@
               "triggerPatternCycle": false
             },
             "children": {},
-            "effects": [],
+            "effects": [
+              {
+                "id": 6484,
+                "class": "heronarts.lx.effect.StrobeEffect",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false
+                },
+                "parameters": {
+                  "label": "Strobe",
+                  "enabled": true,
+                  "speed": 0.0,
+                  "depth": 0.5099999997764826,
+                  "bias": 0.0,
+                  "waveshape": 0,
+                  "tempoSync": false,
+                  "tempoDivision": 5,
+                  "tempoPhaseOffset": 0.0,
+                  "minFrequency": 0.3019999999999998,
+                  "maxFrequency": 5.0
+                },
+                "children": {
+                  "modulation": {
+                    "id": 6485,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
+              }
+            ],
             "clips": [],
             "patternIndex": 0,
             "patterns": [
               {
-                "id": 6107,
-                "class": "heronarts.lx.pattern.color.GradientPattern",
+                "id": 6482,
+                "class": "heronarts.lx.pattern.color.SolidPattern",
                 "internal": {
                   "modulationColor": 0,
                   "expanded": true,
@@ -1510,30 +1550,17 @@
                   "autoCycleEligible": true
                 },
                 "parameters": {
-                  "label": "Gradient",
+                  "label": "Solid",
                   "recall": false,
-                  "xAmount": 0.13333339244127274,
-                  "yAmount": 0.0,
-                  "zAmount": 0.0,
-                  "xOffset": 0.0,
-                  "yOffset": 0.0,
-                  "zOffset": 0.0,
-                  "colorMode": 1,
-                  "blendMode": 1,
-                  "gradient": 1.0,
-                  "fixedColor/brightness": 100.0,
-                  "fixedColor/saturation": 100.0,
-                  "fixedColor/hue": 0.0,
-                  "xMode": 0,
-                  "yMode": 0,
-                  "zMode": 0,
-                  "paletteIndex": 1,
-                  "paletteStops": 5,
-                  "gradientRange": 360.0
+                  "color/brightness": 100.0,
+                  "color/saturation": 100.0,
+                  "color/hue": 0.0,
+                  "color/mode": 0,
+                  "color/index": 1
                 },
                 "children": {
                   "modulation": {
-                    "id": 6108,
+                    "id": 6483,
                     "class": "heronarts.lx.modulation.LXModulationEngine",
                     "internal": {
                       "modulationColor": 0
@@ -1754,7 +1781,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.8839421551239376
+            "basis": 0.768853343895176
           }
         ],
         "modulations": [
@@ -1778,29 +1805,6 @@
               "enabled": true,
               "polarity": 1,
               "range": -0.5249999901279807
-            },
-            "children": {}
-          },
-          {
-            "source": {
-              "id": 50,
-              "path": "/modulation/modulator/1"
-            },
-            "target": {
-              "componentId": 6107,
-              "parameterPath": "xAmount",
-              "path": "/mixer/channel/7/pattern/1/xAmount"
-            },
-            "id": 6109,
-            "class": "heronarts.lx.modulation.LXCompoundModulation",
-            "internal": {
-              "modulationColor": 0
-            },
-            "parameters": {
-              "label": "LX",
-              "enabled": true,
-              "polarity": 1,
-              "range": 0.6125000091269612
             },
             "children": {}
           },
