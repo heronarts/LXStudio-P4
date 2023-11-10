@@ -12,6 +12,7 @@ Getting started with LXStudio was a struggle, but now that I understand how it w
   - [LX Studio API reference &rarr;](http://lx.studio/api/)
   - [Core LXStudio Code](https://github.com/heronarts/LX)
 ## Notes and Gotchas
+- I made a walkthrough/getting started video! https://www.youtube.com/watch?v=6oLdXEgbOgQ
 - I don't know where all the LXStudio code is. I.e. I don't know where the UI code is. Maybe it's not open source?
 - Note that this repo simply has some pre-built JARs that are used. The only compilation that's running is the patterns you write.
 - The LXStudio interface is largely about "live" VJing. You could in theory have this run on a Raspberry Pi, and have a sibling application control it. Probably through OSC? See the midi-to-osc folder on how to do that. I'm not sure what the typically recommended way to do it is.
