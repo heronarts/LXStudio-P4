@@ -1,22 +1,17 @@
-package entwined.pattern.colin_hunt;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import entwined.core.TSBufferedPattern;
 // import entwined.pattern.colin_hunt.BleepBloop.Blip;
-import entwined.utils.SimplexNoise;
+// import entwined.utils.SimplexNoise;
 import heronarts.lx.LX;
 import heronarts.lx.model.LXModel;
 import heronarts.lx.model.LXPoint;
 
-/**
-Blips go up
-*/
 public
-class BleepBloop extends TSBufferedPattern {
+class BleepBloop extends LXPattern {
 private
-  List<Blip> blips = new ArrayList<Blip>();
+  Blip blip;
 
   float xOff = 0;
   float zOff = 0;
@@ -29,37 +24,31 @@ public
     super(lx);
 
     // for every shrub, add a Blip
-    for (int shrubIdx = 0; shrubIdx < model.sub("SHRUB").size(); shrubIdx++) {
-      blips.add(new Blip(false, shrubIdx));
-      // System.out.println("BleepBloop - found " + shrubIdx + " shrubs");
-    }
+    // for (int shrubIdx = 0; shrubIdx < model.sub("SHRUB").size(); shrubIdx++)
+    // {
+    blip = new Blip();
+    // System.out.println("BleepBloop - found " + shrubIdx + " shrubs");
+    // }
     // System.out.println("BleepBLoop: hue 1 " +  hue1 + " hue 2 " + hue2);
   }
 
-  @Override public void bufferedRun(double deltaMs) {
+  @Override public void run(double deltaMs) {
     a += .01;
     hue1 = (hue1 + .05f) % 360.0f;
     hue2 = (hue2 + .05f) % 360.0f;
 
     xOff = (float)Math.cos(a);
     zOff = (float)Math.sin(a);
-    int shrubIdx = 0;
-    for (LXModel shrub : model.sub("SHRUB")) {
-      for (LXPoint cube : shrub.points) {
-        colors[cube.index] = LX.hsb(
-            blips.get(shrubIdx).getHue(),
-            blips.get(shrubIdx).getSat(cube.x, cube.y, cube.z, a),
-            blips.get(shrubIdx).getBrightness(cube.x, cube.y, cube.z, a));
-      }
+    for (LXPoint point : model.points) {
+      colors[point.index] =
+          LX.hsb(blip.getHue(), blip.getSat(point.x, point.y, point.z, a),
+                 blip.getBrightness(point.x, point.y, point.z, a));
+    }
 
-      for (Blip blip : blips) {
-        blip.update(deltaMs);
-      }
+    blip.update(deltaMs);
 
-      if (a > LX.TWO_PI) {
-        a = 0;
-      }
-      shrubIdx++;
+    if (a > LX.TWO_PI) {
+      a = 0;
     }
   }
 
@@ -70,42 +59,28 @@ private
     // static final float baseHue;
     float speed;
     float tailLen;
-    boolean isOn;
     // boolean isTree;
     // int sculptureIdx;
 
-    Blip(boolean TorS, int _idx) {
+    Blip() {
       height = 0;
       if (Math.random() < .70) {
         hue = hue1;
       } else {
         hue = hue2;
       }
-      speed = 1 + (9 * (float)Math.random());
+      resetSpeed();
       tailLen = 100;
-      isOn = false;
       // isTree = TorS;
-      // sculptureIdx = _idx;
-
-      if (Math.random() < .01) {
-        isOn = true;
-      }
     }
 
   private
-    float getHue() {
-      if (!isOn) {
-        return 0;
-      }
+    float getHue() { return hue; }
 
-      return hue;
-    }
-
+  private
+    void resetSpeed() { speed = 3 + (9 * (float)Math.random()); }
   private
     float getSat(float x, float y, float z, float _a) {
-      if (!isOn) {
-        return 0;
-      }
 
       if (height - y < 0 || height - y > tailLen) {
         return 100;
@@ -125,9 +100,6 @@ private
 
   private
     float getBrightness(float x, float y, float z, float _a) {
-      if (!isOn) {
-        return 0;
-      }
 
       // get rid of edge cases first, Dist > tail or < 0, THEN do the math
       if (height - y < 0 || height - y > tailLen) {
@@ -149,23 +121,15 @@ private
 
   private
     void update(double _deltaMs) {
-      if (isOn) { // on
-        height += (((float)_deltaMs) / 50) * speed;
+      height += (((float)_deltaMs) / 50) * speed;
 
-        if (height >= tailLen * 2) {
-          isOn = false;
-          height = 0;
-          speed = 1 + (9 * (float)Math.random());
-          if (Math.random() < .70) {
-            hue = hue1;
-          } else {
-            hue = hue2;
-          }
-        }
-      } else { // off
-        // stagger the turn Ons here
-        if (Math.random() < .01) {
-          isOn = true;
+      if (height >= tailLen * 2) {
+        height = 0;
+        resetSpeed();
+        if (Math.random() < .70) {
+          hue = hue1;
+        } else {
+          hue = hue2;
         }
       }
     }
