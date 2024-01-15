@@ -43,7 +43,6 @@ public
     verticalSaw.start();
     LX.error("test2");
     this.setupLogger();
-    log("hello test");
   }
 
   void setupLogger() {
