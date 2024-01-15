@@ -1,5 +1,7 @@
 public
-static class BaseMaskEffect extends LXEffect {
+static class BaseMaskEffect extends LXEffect
+// implements UIDeviceControls<BaseMaskEffect>
+{
 public
   enum MaskChoice {
     BASE_ONLY("Base"), STRIPS_ONLY("Strips");
@@ -39,5 +41,11 @@ void run(double deltaMs, double enabledAmount) {
     }
   }
 }
+
+  // @Override public void buildDeviceControls(UI ui, UIDevice uiDevice,
+  //                                           BaseMaskEffect pattern) {
+  //   uiDevice.setContentWidth(COL_WIDTH);
+  //   addColumn(uiDevice, COL_WIDTH, "Mask", newDropMenu(pattern.maskChoice));
+  // }
 
 }

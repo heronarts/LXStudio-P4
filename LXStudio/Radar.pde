@@ -3,8 +3,6 @@ import heronarts.lx.model.LXPoint;
 import heronarts.lx.modulator.SawLFO;
 import heronarts.lx.pattern.LXPattern;
 
-//import Utils;
-
 @LXCategory("Ascension") public class Radar extends LXPattern {
     float time = 0;
     // All values below are on the scale from zero to one.
@@ -12,9 +10,6 @@ import heronarts.lx.pattern.LXPattern;
     final double deviation = 0.03;
     final double minSweepCenter = 0;
     final double maxSweepCenter = 1;
-    final double periodMs = 3000;
-    final double periodMsMin = 250;
-    final double periodMsMax = 3000;
     final SinLFO periodModulator = new SinLFO(periodMsMin, periodMsMax, periodMs);
     
     final SawLFO radarSweepModulator = new SawLFO(minSweepCenter, maxSweepCenter,

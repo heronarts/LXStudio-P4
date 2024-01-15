@@ -10,7 +10,9 @@ import javax.imageio.ImageIO;
 
 // Here is a fairly basic example pattern that renders a plane that can be moved
 // across one of the axes.
-@LXCategory("Ascension") public static class ImagePattern extends LXPattern {
+@LXCategory("Ascension") public static class ImagePattern extends LXPattern
+// implements UIDeviceControls<ImagePattern>
+{
 
   class ImageReader {
   private
@@ -192,7 +194,8 @@ public
     if (this.currentFname != this.fname.getObject()) {
       this.currentFname = this.fname.getObject();
       this.imageReader = new ImageReader(
-          "/Users/charlie/dev/LXStudio-AscensionPod/" +
+          // "/Users/charlie/dev/LXStudio-AscensionPod/" +
+          "/Users/chase/clones-third-party/LXStudio-AscensionPod/" +
           "image-read/" + this.currentFname);
     }
     // float xSpeed = 0.2f;
@@ -213,5 +216,12 @@ public
       colors[p.index] = LXColor.rgb(rgb[0], rgb[1], rgb[2]);
     }
   }
+
+  // @Override public void buildDeviceControls(UI ui, UIDevice uiDevice,
+  //                                           ImagePattern pattern) {
+  //   uiDevice.setContentWidth(COL_WIDTH);
+  //   addColumn(uiDevice, COL_WIDTH, "img", newDropMenu(pattern.fname),
+  //             newKnob(pattern.sweepPeriodX), newKnob(pattern.sweepPeriodY));
+  // }
 
 }
