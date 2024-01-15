@@ -5,16 +5,20 @@ import heronarts.lx.pattern.LXPattern;
 
 //import Utils;
 
-public class Radar extends LXPattern {
+@LXCategory("Ascension") public class Radar extends LXPattern {
     float time = 0;
     // All values below are on the scale from zero to one.
     // std dev of the gaussian function that determines the thickness of the line
     final double deviation = 0.03;
-    final double minSweepCenter = -0.4;
-    final double maxSweepCenter = 1.6;
+    final double minSweepCenter = 0;
+    final double maxSweepCenter = 1;
     final double periodMs = 3000;
+    final double periodMsMin = 250;
+    final double periodMsMax = 3000;
+    final SinLFO periodModulator = new SinLFO(periodMsMin, periodMsMax, periodMs);
+    
     final SawLFO radarSweepModulator = new SawLFO(minSweepCenter, maxSweepCenter,
-            periodMs);
+            periodModulator);
     final float[] detectedBrightness;
 
     double previousSweepPosition = minSweepCenter;
@@ -22,6 +26,7 @@ public class Radar extends LXPattern {
     public Radar(LX lx) {
         super(lx);
         addModulator(radarSweepModulator).start();
+        addModulator(periodModulator).start();
 
         detectedBrightness = new float[lx.getModel().points.length];
     }
@@ -40,7 +45,7 @@ public class Radar extends LXPattern {
         float sweepPosition = radarSweepModulator.getValuef();
         // XXX - local or global??
         for (LXPoint cube : model.points) {
-            float mappedCubeZ = 1 - Utils.map(cube.z, model.zMin, model.zMax);
+            float mappedCubeZ = 1 - PodUtils.map(cube.z, model.zMin, model.zMax);
             //float mappedCubeZ = 1;
             if (previousSweepPosition < mappedCubeZ && sweepPosition > mappedCubeZ) {
                 // Sweep just passed the cube, randomly set whether this cube is "detected"
@@ -64,7 +69,7 @@ public class Radar extends LXPattern {
 
             // TODO make the 0.75 a parameter from 0.5 to 2, default val 0.75
             detectedBrightness[cube.index] = (float) Math.exp(Math.log(detectedBrightness[cube.index])
-                    - deltaMs / (periodMs * 0.5));
+                    - deltaMs / (periodModulator.getValuef() * 0.5));
         }
         previousSweepPosition = sweepPosition;
     }
