@@ -10,6 +10,9 @@ import heronarts.lx.pattern.LXPattern;
     final double deviation = 0.03;
     final double minSweepCenter = 0;
     final double maxSweepCenter = 1;
+    final double periodMs = 3000;
+    final double periodMsMin = 250;
+    final double periodMsMax = 3000;
     final SinLFO periodModulator = new SinLFO(periodMsMin, periodMsMax, periodMs);
     
     final SawLFO radarSweepModulator = new SawLFO(minSweepCenter, maxSweepCenter,
