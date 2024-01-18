@@ -1,4 +1,3 @@
-package entwined.pattern.misko;
 
 import heronarts.lx.LX;
 import heronarts.lx.model.LXPoint;
