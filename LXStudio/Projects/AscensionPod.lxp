@@ -1,6 +1,6 @@
 {
   "version": "0.4.1",
-  "timestamp": 1705287565169,
+  "timestamp": 1705571036694,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -516,9 +516,135 @@
           "modulationColor": 0
         },
         "parameters": {
-          "label": "Arc 13",
+          "label": "Base Strip",
           "x": 0.0,
           "y": -1.0,
+          "z": 0.0,
+          "yaw": 0.0,
+          "pitch": 90.0,
+          "roll": 180.0,
+          "scale": 1.0,
+          "selected": false,
+          "deactivate": false,
+          "enabled": true,
+          "brightness": 1.0,
+          "identify": false,
+          "mute": false,
+          "solo": false,
+          "tags": "strip arc",
+          "protocol": 1,
+          "byteOrder": 2,
+          "transport": 0,
+          "reverse": false,
+          "host": "127.0.0.1",
+          "port": 7890,
+          "dmxChannel": 0,
+          "artNetUniverse": 12,
+          "opcChannel": 0,
+          "opcOffset": 0,
+          "ddpDataOffset": 0,
+          "kinetPort": 1,
+          "numPoints": 200,
+          "radius": 17.0,
+          "degrees": 360.0,
+          "positionMode": 1
+        },
+        "children": {}
+      },
+      {
+        "id": 6920,
+        "class": "heronarts.lx.structure.ArcFixture",
+        "internal": {
+          "modulationColor": 0
+        },
+        "parameters": {
+          "label": "Infinity Strip 1",
+          "x": 0.0,
+          "y": 111.8,
+          "z": 0.0,
+          "yaw": 0.0,
+          "pitch": 90.0,
+          "roll": 180.0,
+          "scale": 1.0,
+          "selected": false,
+          "deactivate": false,
+          "enabled": true,
+          "brightness": 1.0,
+          "identify": false,
+          "mute": false,
+          "solo": false,
+          "tags": "strip arc",
+          "protocol": 1,
+          "byteOrder": 2,
+          "transport": 0,
+          "reverse": false,
+          "host": "127.0.0.1",
+          "port": 7890,
+          "dmxChannel": 0,
+          "artNetUniverse": 13,
+          "opcChannel": 0,
+          "opcOffset": 0,
+          "ddpDataOffset": 0,
+          "kinetPort": 1,
+          "numPoints": 32,
+          "radius": 20.0,
+          "degrees": 360.0,
+          "positionMode": 1
+        },
+        "children": {}
+      },
+      {
+        "id": 7122,
+        "class": "heronarts.lx.structure.ArcFixture",
+        "internal": {
+          "modulationColor": 0
+        },
+        "parameters": {
+          "label": "Infinity Strip 2",
+          "x": 0.0,
+          "y": 110.9,
+          "z": 0.0,
+          "yaw": 0.0,
+          "pitch": 90.0,
+          "roll": 180.0,
+          "scale": 1.0,
+          "selected": false,
+          "deactivate": false,
+          "enabled": true,
+          "brightness": 1.0,
+          "identify": false,
+          "mute": false,
+          "solo": false,
+          "tags": "strip arc",
+          "protocol": 1,
+          "byteOrder": 2,
+          "transport": 0,
+          "reverse": false,
+          "host": "127.0.0.1",
+          "port": 7890,
+          "dmxChannel": 0,
+          "artNetUniverse": 14,
+          "opcChannel": 0,
+          "opcOffset": 0,
+          "ddpDataOffset": 0,
+          "kinetPort": 1,
+          "numPoints": 32,
+          "radius": 20.0,
+          "degrees": 360.0,
+          "positionMode": 1
+        },
+        "children": {}
+      },
+      {
+        "id": 7137,
+        "class": "heronarts.lx.structure.ArcFixture",
+        "internal": {
+          "modulationColor": 0
+        },
+        "parameters": {
+          "label": "Infinity Strip 3",
+          "x": 0.0,
+          "y": 110.0,
           "z": 0.0,
           "yaw": 0.0,
           "pitch": 90.0,
@@ -539,13 +665,13 @@
           "host": "127.0.0.1",
           "port": 7890,
           "dmxChannel": 0,
-          "artNetUniverse": 12,
+          "artNetUniverse": 15,
           "opcChannel": 0,
           "opcOffset": 0,
           "ddpDataOffset": 0,
           "kinetPort": 1,
-          "numPoints": 100,
-          "radius": 17.0,
+          "numPoints": 32,
+          "radius": 20.0,
           "degrees": 360.0,
           "positionMode": 1
         },
@@ -739,13 +865,13 @@
               "transitionEnabled": false,
               "transitionTimeSecs": 3.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 4,
+              "focusedPattern": 3,
               "triggerPatternCycle": false
             },
             "children": {},
             "effects": [],
             "clips": [],
-            "patternIndex": 4,
+            "patternIndex": 3,
             "patterns": [
               {
                 "id": 48,
@@ -891,39 +1017,6 @@
                 "children": {
                   "modulation": {
                     "id": 5749,
-                    "class": "heronarts.lx.modulation.LXModulationEngine",
-                    "internal": {
-                      "modulationColor": 0
-                    },
-                    "parameters": {
-                      "label": "Modulation"
-                    },
-                    "children": {},
-                    "modulators": [],
-                    "modulations": [],
-                    "triggers": []
-                  }
-                },
-                "deviceVersion": -1
-              },
-              {
-                "id": 6913,
-                "class": "LXStudio$Zebra",
-                "internal": {
-                  "modulationColor": 0,
-                  "expanded": true,
-                  "modulationExpanded": false,
-                  "autoCycleEligible": true
-                },
-                "parameters": {
-                  "label": "Zebra",
-                  "recall": false,
-                  "thickness": 1.0,
-                  "period": 1000.0
-                },
-                "children": {
-                  "modulation": {
-                    "id": 6914,
                     "class": "heronarts.lx.modulation.LXModulationEngine",
                     "internal": {
                       "modulationColor": 0
@@ -1563,7 +1656,7 @@
                     "exp": 0.0
                   },
                   "children": {},
-                  "basis": 0.3508834696665033
+                  "basis": 0.8199692521128412
                 }
               }
             ]
@@ -1922,7 +2015,7 @@
               "exp": 0.0
             },
             "children": {},
-            "basis": 0.2875753799429561
+            "basis": 0.45487771933588944
           }
         ],
         "modulations": [
@@ -2150,9 +2243,9 @@
         "centerPoint": false,
         "camera": {
           "active": false,
-          "radius": 168.60586547851562,
-          "theta": 2.1852402463555336,
-          "phi": 0.21852404065430164,
+          "radius": 140.46695009072633,
+          "theta": 1.4179269168525934,
+          "phi": 0.7998220175504684,
           "x": 0.08849906921386719,
           "y": 56.20195770263672,
           "z": 0.08849906921386719
@@ -2160,9 +2253,9 @@
         "cue": [
           {
             "active": false,
-            "radius": 168.60586547851562,
-            "theta": 2.1852402463555336,
-            "phi": 0.21852404065430164,
+            "radius": 140.46695009072633,
+            "theta": 1.4179269168525934,
+            "phi": 0.7998220175504684,
             "x": 0.08849906921386719,
             "y": 56.20195770263672,
             "z": 0.08849906921386719
