@@ -37,7 +37,6 @@ public
     brightness.start();
     LX.error("test2");
     this.setupLogger();
-    log("hello test");
   }
 
   void setupLogger() {

@@ -1,0 +1,13 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas {
+    background-color: #f0f0f0;
+    display: block; /* Removes default margin */
+    width: 100vw;
+    height: 100vh;
+}
