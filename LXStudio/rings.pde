@@ -79,7 +79,9 @@ public
       if (distance > ringDistance / 2) {
         distance = ringDistance - distance;
       }
-      if (distance < width) {
+      if (p.yn > .9) {
+        colors[p.index] = LXColor.hsb(0, 0, 0);
+      } else if (distance < width) {
         colors[p.index] = LXColor.hsb(this.myColor.hue.getValuef(),
                                       this.myColor.saturation.getValuef(),
                                       this.myColor.brightness.getValuef());

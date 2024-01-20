@@ -7,10 +7,16 @@ import heronarts.lx.pattern.LXPattern;
 @LXCategory("Ascension") public class MacSpiral extends LXPattern {
 
 public
-  MacSpiral(LX lx) { super(lx); }
+  MacSpiral(LX lx) {
+    super(lx);
+    addParameter("speed", this.speed);
+  }
 
 private
   float time = 0;
+
+  final CompoundParameter speed =
+      new CompoundParameter("speed", 1, 1, 5).setDescription("speed");
 
   final int nSteps = 64;
   final float PI = 3.141592f;
@@ -56,7 +62,7 @@ public
   }
 
   @Override public void run(double deltaMs) {
-    time += deltaMs / 1000.0f; // Update time
+    time += deltaMs / 1000.0f * speed.getValuef(); // Update time
 
     for (LXPoint p : model.points) {
       Vec2 uv = new Vec2(Vec2.getU(p), Vec2.getV(p));
