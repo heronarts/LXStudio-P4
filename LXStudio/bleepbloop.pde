@@ -8,7 +8,7 @@ import heronarts.lx.LX;
 import heronarts.lx.model.LXModel;
 import heronarts.lx.model.LXPoint;
 
-public
+@LXCategory("Ascension") public
 class BleepBloop extends LXPattern {
 private
   Blip blip;

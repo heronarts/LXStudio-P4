@@ -5,7 +5,7 @@ import heronarts.lx.parameter.CompoundParameter;
 import heronarts.lx.pattern.LXPattern;
 import heronarts.lx.model.LXPoint;
 
-public
+@LXCategory("Ascension") public
 static class Zebra extends LXPattern {
 
   CompoundParameter thickness = new CompoundParameter("THIC", 1, 0, 6);

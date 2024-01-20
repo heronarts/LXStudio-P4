@@ -1,3 +1,4 @@
+// Built from a shader by ChatGPT
 
 
 import heronarts.lx.LX;
@@ -6,7 +7,7 @@ import heronarts.lx.model.LXPoint;
 import heronarts.lx.parameter.CompoundParameter;
 import heronarts.lx.pattern.LXPattern;
 
-@LXCategory("My Patterns") public class RotatingTriangle extends LXPattern {
+@LXCategory("Ascension") public class RotatingTriangle extends LXPattern {
 
 private
   final CompoundParameter pointRadius =
