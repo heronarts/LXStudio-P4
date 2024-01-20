@@ -4,7 +4,7 @@ import heronarts.lx.LXCategory;
 import heronarts.lx.model.LXPoint;
 import heronarts.lx.pattern.LXPattern;
 
-@LXCategory("Example") public class MacSpiral extends LXPattern {
+@LXCategory("Ascension") public class MacSpiral extends LXPattern {
 
 public
   MacSpiral(LX lx) { super(lx); }
