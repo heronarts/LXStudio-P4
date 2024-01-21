@@ -26,7 +26,7 @@ osc_mapping1 = {
 osc_mapping2 = {
     4: '/lx/mixer/channel/15/fader', # m3.3
     7:  '/lx/mixer/channel/16/fader',
-    # 8:  '/lx/mixer/channel/16/fader',
+    8:  '/lx/mixer/channel/21/pattern/2/width',
     11:  '/lx/mixer/channel/19/fader',
     15:  '/lx/mixer/channel/20/fader',
     23: '/lx/mixer/channel/21/fader',
